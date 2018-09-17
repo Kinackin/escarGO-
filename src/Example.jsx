@@ -30,6 +30,7 @@ const trackStyles = {
 class Example extends PureComponent {
     constructor(props){
      super(props);
+     console.log(this.props.snailColour);
      let snailChoice = null; 
      switch(this.props.snailColour){
         case 'red': 

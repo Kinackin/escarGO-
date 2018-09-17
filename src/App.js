@@ -19,6 +19,9 @@ class App extends Component {
         <Example snailColour="red" />
         <Example snailColour="green"/>
         <Example snailColour="blue"/>
+        <Example snailColour="red" />
+        <Example snailColour="green"/>
+        <Example snailColour="blue"/>
         </p>
       </div>
     );
