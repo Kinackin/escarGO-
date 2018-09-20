@@ -3,6 +3,7 @@
 import React, { PureComponent } from 'react';
 import Animate from 'react-move/Animate';
 import { easeExpOut } from 'd3-ease';
+import './App.css';
 
 import redSnail from './images/redSnail.png';
 import greenSnail from './images/greenSnail.png';
@@ -24,7 +25,10 @@ const trackStyles = {
   position: 'relative',
   margin: '10px 10px 10px 10px',
   width: '100%',
-  height: 100,
+  height: 50,
+
+  //opacity: 1, 
+ 
 };
 
 class Example extends PureComponent {
@@ -34,13 +38,13 @@ class Example extends PureComponent {
      let snailChoice = null; 
      switch(this.props.snailColour){
         case 'red': 
-        snailChoice = "/images/redSnail.png"
+        snailChoice = "./images/redSnail.png"
         break;
         case 'green':
-        snailChoice = "/images/greenSnail.png"
+        snailChoice = "./images/greenSnail.png"
         break;
         case 'blue':
-        snailChoice = "/images/blueSnail.png";
+        snailChoice = "./images/blueSnail.png";
         break;
         default :
         snailChoice = "DEFAULT";
@@ -62,12 +66,13 @@ class Example extends PureComponent {
   render() {
     return (
       <div>
-        <button
+        {/* <button
           onClick={this.handleClick}
         >
-          escarGO!
-        </button>
-        <Animate
+         EscarGO!
+        </button> */}
+
+       <Animate
           start={() => ({
             x: 0,
           })}
@@ -79,17 +84,19 @@ class Example extends PureComponent {
         >
           {(state) => {
             const { x } = state;
-            console.log(this.state.snailChoice);
+           // console.log(this.state.snailChoice);
+           console.log(this.state.snailColour);
             return (
-              <div style={trackStyles}>
-              <img src={redSnail}
+              <div className='Path-Settings' style={trackStyles}>
+             
+              <img src={this.state.snailColour}
+          
                     style={{
                   position: 'absolute',
-                    width: 90,
+                    width: 50,
                     height: '90%',
                     borderRadius: 4,
-                    opacity: 0.7,
-                    // backgroundColor: '#00cf77',
+            
                     WebkitTransform: `translate3d(${x}px, 0, 0)`,
                     transform: `translate3d(${x}px, 0, 0)`,
 

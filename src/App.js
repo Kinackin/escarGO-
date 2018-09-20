@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Sound from 'react-sound';
 import logo from './images/logo.svg';
 import Snail from './Snail';
 import title from './images/title.png';
@@ -15,17 +16,21 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <p classname="app-title">Race the snails - win the prize!</p>
         </header>
+        
         <p className="App-intro">
-        <Example snailColour="red" />
+         <Example snailColour="red" />
         <Example snailColour="green"/>
         <Example snailColour="blue"/>
         <Example snailColour="red" />
         <Example snailColour="green"/>
-        <Example snailColour="blue"/>
+        <Example snailColour="blue"/> 
         </p>
+    
       </div>
     );
   }
 }
 
 export default App;
+
+

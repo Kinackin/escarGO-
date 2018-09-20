@@ -1,9 +1,10 @@
 .App {
   text-align: center;
+  background-color: #51d64d;
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 2s linear;
+  animation: App-logo-spin infinite 1s linear;
   height: 80px;
 }
 
@@ -26,4 +27,11 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+.Path-Settings {
+  background-image: url('./images/path.png');
+  background-repeat: repeat-x;
+  background-size: contain;
+  /* background-color: #222; */
 }
